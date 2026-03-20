@@ -27,6 +27,7 @@ const soundName = document.getElementById("soundName");
 let hidetimeout;
 let num = 1;
 let isplaying = false;
+let dim = document.getElementById("dimLayer");
 
 /* let text1 = names[2] + "<br>" + names[10] + "<br>" + names[28]
 soundName.innerHTML = text1;
@@ -41,6 +42,11 @@ play.addEventListener("click", function(event) {
     
     let audio = new Audio(text);
     audio.play();
+    
+    dim.style.opacity = 1;
+    setTimeout(() => {
+        dim.style.opacity = 0;
+    }, 240);
 
     audio.addEventListener("ended", () =>{
         isplaying = false;

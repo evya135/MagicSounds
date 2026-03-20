@@ -56,8 +56,12 @@ body {
 .dim {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* change this */
+    background: rgba(0, 0, 0, 0.3); /* change this */
     pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    display: block;
+    transition: 0.3s;
 }
 /* main button centered */
 .main-btn {
@@ -248,17 +252,16 @@ body {
     </style>
 </head>
 <body>
-<div>
-    <div class="controls">
-            <div class="screen">
-                <button class="main-btn" id="play"></button>
+    <div class="dim" id="dimLayer"></div>
+        <div class="controls">
+                <div class="screen">
+                    <button class="main-btn" id="play"></button>
+                </div>
+            <div class="bottomBar">
+                <button class="backBTN" id="back"></button>
+                <text id="soundName" class="soundText"></text>
+                <button class="forwardBTN" id="forward"></button>
             </div>
-        <div class="bottomBar">
-            <button class="backBTN" id="back"></button>
-            <text id="soundName" class="soundText"></text>
-            <button class="forwardBTN" id="forward"></button>
         </div>
-    </div>
-</div>
 </body>
 </html>
