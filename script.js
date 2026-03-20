@@ -70,7 +70,7 @@ back.addEventListener("click", function(event) {
 forward.addEventListener("click", function(event) {
    event.preventDefault();
     clearTimeout(hidetimeout);
-   if(num < 39){
+   if(num < 29){
     num++;    
     text = names[num-2] + "<br>" + names[num-1] + "<br>" + names[num];
         console.log("forward " + text);
